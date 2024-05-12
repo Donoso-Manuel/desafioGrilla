@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 7vh 88vh 5vh ;
+    grid-template-areas: 
+                        'navbar navbar'
+                        'asidebar productgrid'
+                        'footer footer';
+    background-image: url(../img/fondoGrillaProducto.jpg);
+}
+.navBar{
+    grid-area: navbar;
+    background-color: lightblue;
+    border: solid 0.5px black;
+    display: flex; 
+    font-size: 1.5rem; 
+    justify-content: center;
+    align-items: center;
+
+}
+.asideBar{
+    grid-area: asidebar;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    border: solid 0.5px black;
+}
+.asideBar h2{
+    padding: 1rem 0 ;
+    color: white;
+}
+.cantProductos{
+    color: rgba(128, 128, 128, 0.9);
+}
+.listadoProductos{
+    margin-top: 1rem;
+    list-style: none;
+    color: white;
+
+}
+.listadoProductos li{
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+}
+.listadoProductos li:hover{
+    background-color:lightgreen;
+    color: black;
+    transition: 0.5s;
+    text-decoration: underline;
+}
+.productGrid{
+    padding: 0 0.75rem 0 0;
+    grid-area: productgrid;
+    border: solid 0.5px black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    overflow: hidden;
+}
+.productoGrilla{
+    border: solid 0.5px black;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.productoGrilla:hover{
+    transform: scale(1.05);
+}
+.imagenPRoducto{
+    background-color: white;
+    text-align: center;
+}
+.imagenPRoducto img{
+    width: 250px;
+    height: 170px;
+}
+.infoProducto{
+    background-color: lightgray;
+    padding: 0.25rem 0;
+    text-align: center;
+}
+.precio{
+    padding-top: 0.5rem;
+}
+.precioAntiguo{
+    color: rgba(128, 128, 128, 0.5);
+    text-decoration: line-through;
+}
+.btnCompra{
+    padding: 0.5rem;
+    background-color: #0a1f41 ;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+.btnCompra:hover{
+    transition: 0.5s;
+    background-color: lightblue;
+    color: black;
+}
+.footer{
+    grid-area: footer;
+    display: table;
+    color: white;
+    font-size: 1.25rem;
+    border: solid 0.5px black;
+}
+.footer p{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
